@@ -487,7 +487,7 @@ function setItem(key, value, callback) {
                 reject(err);
             };
 
-            var req = store.put(value, key);
+            var req = store.put(value, key); // jshint ignore:line
         }).catch(reject);
     });
 

@@ -117,22 +117,10 @@ module.exports = exports = function(grunt) {
         connect: {
             test: {
                 options: {
-                    base: '.',
-                    hostname: '*',
                     port: 9999,
-                    middleware: function(connect) {
-                        return [
-                            function(req, res, next) {
-                                res.setHeader('Access-Control-Allow-Origin',
-                                              '*');
-                                res.setHeader('Access-Control-Allow-Methods',
-                                              '*');
-
-                                return next();
-                            },
-                            connect.static(require('path').resolve('.'))
-                        ];
-                    }
+                    base: '.',
+                    open: true,
+                    keepalive: true
                 }
             }
         },

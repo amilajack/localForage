@@ -288,7 +288,7 @@ class LocalForage {
                         self._ready = null;
 
                         return self.getDriver(driverName)
-                            .then(driver => {
+                            .then(driver => { // jshint ignore:line
                                 self._extend(driver);
                                 setDriverToConfig();
 
